@@ -1,0 +1,6 @@
+Sourcerer.py
+EDA_Sourcerer.egg-info/PKG-INFO
+EDA_Sourcerer.egg-info/SOURCES.txt
+EDA_Sourcerer.egg-info/dependency_links.txt
+EDA_Sourcerer.egg-info/entry_points.txt
+EDA_Sourcerer.egg-info/top_level.txt
