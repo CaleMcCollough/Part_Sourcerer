@@ -1,17 +1,17 @@
-# @project      Part-Sourcerer
-# @copyright    Blue Storm Engineering, LLC. All rights reserved.
+# @project      Metascrapper
+# @copyright    Cale McCollough. All rights reserved.
 # @lincense     This project is released under the GNU Public License 3.0 (http://www.gnu.org/licenses/gpl-3.0.html).
 # @author       Cale McCollough
 # @date         01/15/2015
-# @brief        This file contains the ComponentSourcerer class for Part-Sourcerer
-# @description  ComponentSourcerer is an app that assists in sourcing electronics products from parts suppliers.
+# @brief        This file contains the ComponentScrapper class for Metascrapper
+# @description  ComponentScrapper is an app that assists in sourcing electronics products from parts suppliers.
 # 
 #
 # Minimal vs Verbose Metadata Importing Modes
 # -----------------------------------------------------------------------------------------------------------------------------
 # Users might not want a bunch of extra metadata fields clouding up the BOM export columns in 
 # Becuase most part variants will share the same metadata, only fields that are different, are .
-# Part-Sourcerer will soon feature its own BOM export tool that 
+# Metascrapper will soon feature its own BOM export tool that 
 # 
 # Importing Supplier Information:
 # 
@@ -29,12 +29,12 @@ import zipfile
 
 import HTMLParser
 
-from Sourcerer import Sourcerer
+from Scrapper import Scrapper
 from SupplierProduct import SupplierProduct
 from ComponentSupplier import ComponentSupplier
-#from DigiKeySourcerer import DigiKeySourcerer
+#from DigiKeyScrapper import DigiKeyScrapper
 
-class ComponentSourcerer(object, HTMLParser):
+class ComponentScrapper(object, HTMLParser):
     __metaclass__  = abc.ABCMeta
     
     # The current state of the parser.
@@ -58,7 +58,7 @@ class ComponentSourcerer(object, HTMLParser):
 
     def __init__(self, projectDirectory):
         HTMLParser.__init__(self)
-        self.projectDirectory = Sourcerer.cleanDirecoryPath(projectDirectory)
+        self.projectDirectory = Scrapper.cleanDirecoryPath(projectDirectory)
     
     # Abstract function that does some processing of the HTML document from the supplier's website.
     @abc.abstractmethod
@@ -119,7 +119,7 @@ class ComponentSourcerer(object, HTMLParser):
         self.loadFromHTML(supplyCode, delineator, htmlDoc, fileURL)
     
     def loadFromURL(self, supplyCode, delineator, url):
-        htmlDoc = Sourcerer.loadContentFromURL(url)
+        htmlDoc = Scrapper.loadContentFromURL(url)
         self.loadFromHTML(supplyCode, delineator, htmlDoc, url)
     
     # @brief    Function that loads a SupplierProduct from the htmlDoc.
@@ -156,7 +156,7 @@ class ComponentSourcerer(object, HTMLParser):
     # @return   Returns 
     @staticmethod
     def sourceProductFromURL(self, manufactureringCode, delineator, url, supplierName):
-        sourcerer = ComponentSourcerer('/')
+        sourcerer = ComponentScrapper('/')
         sourcerer.loadFromURL(supplyCode, delineator, url)
         return self.product
     
@@ -169,15 +169,15 @@ class ComponentSourcerer(object, HTMLParser):
             for dataItem in metadata:
                 
         
-        # @brief    Function that runs diagnostics on the ComponentSourcerer class
+        # @brief    Function that runs diagnostics on the ComponentScrapper class
         @staticmethod
         def runUnitTest():
             os.system('cls')
-            print 'Running ComponentSourcerer diagnostics...\n'
+            print 'Running ComponentScrapper diagnostics...\n'
             
-            print 'Creating test DigiKeySourcerer...'
-            #sourcerer = DigiKeySourcerer()
+            print 'Creating test DigiKeyScrapper...'
+            #sourcerer = DigiKeyScrapper()
             
-            print '\nDone running ComponentSourcerer diagnostics.\n'
+            print '\nDone running ComponentScrapper diagnostics.\n'
 
-ComponentSourcerer.UnitTest.runUnitTest()
+ComponentScrapper.UnitTest.runUnitTest()

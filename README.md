@@ -1,13 +1,5 @@
-# Part Sourcerer
-An open-source set of tools for managing parts for Bills of Materials and 
-design components written in Python. Part Sourcerer works by entering in the 
-web address for a part on a supplier's website (currently only works with 
-digikey.com). Software then extracts all metadata from supplier's website, and 
-downloads datasheets and 3D models into customizable folder structures. (In the 
-future) The user can also enter in the search entry they used to search for the 
-cheapest part, and the software will automatically suggest cheaper parts. Right 
-now this software is being developed to use with DipTrace (diptrace.com), but I 
-would like to integrate other PCB CAD software.
+# Metascrapper
+An open-source tool for scrapping metadata from the web in Python. Right now it just scraps digikey.com.
 
 ## License
 Copyright © 2016 [Cale McCollough](mailto:cale.mccollough@gmail.com).

@@ -1,21 +1,21 @@
-# @project      Part-Sourcerer
-# @copyright    Blue Storm Engineering, LLC. All rights reserved.
+# @project      Metascrapper
+# @copyright    Cale McCollough. All rights reserved.
 # @lincense     This project is released under the GNU Public License 3.0 (http://www.gnu.org/licenses/gpl-3.0.html).
 # @author       Cale McCollough
 # @date         01/15/2015
-# @brief        This file contains the DesignLibrarySourcerer class for Part-Sourcerer
+# @brief        This file contains the DesignLibraryScrapper class for Metascrapper
 # @description  This class (will in the future) automatically generate design file libraries.
 #
 # Planned Featuers
 #
-# - User can pass in DipTrace PCB, or Schematic, and the DesignLibrarySourcerer will automatically generate component 
+# - User can pass in DipTrace PCB, or Schematic, and the DesignLibraryScrapper will automatically generate component 
 # libraries.
 #
 # - 
 #
 #
 
-class DesignLibrarySourcerer():
+class DesignLibraryScrapper():
     
     def downloadEDAFiles(self):
         print 'Downloading all EDA files to: ', sourcerer.projectDirectory
@@ -31,7 +31,7 @@ class DesignLibrarySourcerer():
     
     class UnitTest ():
         @staticmethod runUnitTest():
-            print 'Running DesignLibrarySourcerer.UnitTest...'
+            print 'Running DesignLibraryScrapper.UnitTest...'
             
             
-            print 'Done running DesignLibrarySourcerer.UnitTest.'
+            print 'Done running DesignLibraryScrapper.UnitTest.'

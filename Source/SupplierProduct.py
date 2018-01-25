@@ -1,9 +1,9 @@
-# @project      Part-Sourcerer
-# @copyright    Blue Storm Engineering, LLC. All rights reserved.
+# @project      Metascrapper
+# @copyright    Cale McCollough. All rights reserved.
 # @lincense     This project is released under the GNU Public License 3.0 (http://www.gnu.org/licenses/gpl-3.0.html).
 # @author       Cale McCollough
 # @date         01/15/2015
-# @brief        This file contains the SupplierProduct class for Part-Sourcerer
+# @brief        This file contains the SupplierProduct class for Metascrapper
 # @description  A SupplierProduct is a type of DesignComponent that adds some functionality, such as pricing and sourcing information.
 # component used in DipTrace.
 # 
@@ -94,7 +94,7 @@ class SupplierProduct():
             self.metadata = { key: value }
             return
         if ' URL' in key and value.startswith('/'): # Then add the supplier web address to the link.
-            value = Sourcerer.fixShortURL(self.supplierDomain + value)
+            value = Scrapper.fixShortURL(self.supplierDomain + value)
             print '###Found short URL: ', value
             print '###self.supplierDomain = ', self.supplierDomain
         

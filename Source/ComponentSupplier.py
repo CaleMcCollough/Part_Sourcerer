@@ -1,13 +1,13 @@
-# @project      Part-Sourcerer
-# @copyright    Blue Storm Engineering, LLC. All rights reserved.
+# @project      Metascrapper
+# @copyright    Cale McCollough. All rights reserved.
 # @lincense     This project is released under the GNU Public License 3.0 (http://www.gnu.org/licenses/gpl-3.0.html).
 # @author       Cale McCollough
 # @date         01/15/2015
-# @brief        This file contains the Supplier class for Part-Sourcerer.
+# @brief        This file contains the Supplier class for Metascrapper.
 # @description  A Supplier is a source for an EDA component.
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #
-# The way that Part-Sourcerer handles adds and removes supplier metadata information into DipTrace is  by
+# The way that Metascrapper handles adds and removes supplier metadata information into DipTrace is  by
 # marking the supplier part variation with a a special code at the begining of each data field name.
 # 
 # The supplier manufacturing code is up to the user to implment.
@@ -18,7 +18,7 @@
 # Supplier N: Assembly Run N Supplier Component
 # 
 # This format is nice if you work with multiple assembly houses that require different packing options.
-# Part-Sourcerer Supplier Code Format
+# Metascrapper Supplier Code Format
 # [Supplier Number (int)][Supplier Char (char)][Alternate Char Code(char)]
 # 
 # The Digi-Key code is by default DK. A supplier code for a prototype unit from Digi-Key looks like this: 0DK

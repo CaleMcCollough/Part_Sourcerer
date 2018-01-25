@@ -1,1 +1,0 @@
-C:\Bitnami\djangostack-1.6.7-0\python
